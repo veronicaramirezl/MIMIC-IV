@@ -1,28 +1,11 @@
 # MIMIC-IV
-A report on the dynamic nature of ECG acquisition in the MIMIC dataset.
 
-<span style='font-family: Times; font-size: 2em;'>MIMIC v. 2.2 Database Dynamic Exploratory Data Analysis</span>
+<span style='font-family: Times; font-size: 2em;'>MIMIC v. 2.2  - Heart Failure study</span>
 
 
 **Veronica Ramirez-Lopera** 
 
-### Objectives: 
-#### Main objective:
--To assess whether the MIMIC-IV database contains sufficient sequential ECGs to support a study 
-on the dynamic aging of the heart in heart failure patients.
-
-#### Secondary objectives:
-1. To analyze the timing of ECGs during each hospitalization.
-1. To visualize patient distribution by ECG frequency and hospitalization count.
-1. To describe a plan for the research protocol modifications according to the ECG data.
-
-### **Table of contents**
-- [Introduction](#introduction)
-- [Package Requirements](#package_requirements)
-- [Data importing](#importing)
-- [Data filtering and visualization](#filtering)
-- [Conclusions and plan](#conclusions)
-- [References](#references)
+This is the companion code for the study titled 'Electrocardiographic Heart Age Gap as a prognostic tool in Heart Failure Patients: A Deep Learning Approach.'
 
 ## Introduction <a name='introduction'></a>
 MIMIC-IV is a freely available electronic health record (EHR) dataset encompassing a decade of patient information (2008-2019) from Beth Israel Deaconess Medical Center [1]. It surpasses its predecessor, MIMIC-III, with a better structure and additional patient information [2, 3].
@@ -36,22 +19,6 @@ As a result, null dates of death indicate the patient was alive at least up to t
 MIMIC-IV also offers a dedicated module: MIMIC-IV ECG. This subset focuses specifically on diagnostic electrocardiograms (ECGs) [2]. It includes approximately 800,000 10-second ECG recordings from nearly 160,000 unique patients. Each ECG utilizes 12 leads and is sampled at 500 Hz [3].
 
 
-## Package requirements <a name='package_requirements'></a>
-
-Notes: 
-
-1- You need to install gcloud if you haven't already. Alternatively, you can use the provided csv files that contain the data.
-
-
-Conclusions and plan
-
-    The MIMIC database contains a significant number of sequential ECGs recorded at various times of an individuals life.
-    There are 6,400 patients with ECGs showing a time gap of more than one year between recordings.
-    Aging profiles could be analyzed for patients, especially those diagnosed with heart failure. While this analysis won't establish causation between the chronic disease and aging, it can provide insights into how heart failure impacts biological age, as estimated using deep learning techniques.
-
-Possible Plan Modification:
-
-    We could analyze the heart profile changes over a one-year period for patients diagnosed with heart failure and compare these changes to a three-year mortality rate. Although we cannot establish causality due to the lack of information on other exposures between hospitalizations, this approach could offer insights into how heart aging progresses in this population. Additionally, it might reveal whether a greater difference in aging profiles is associated with mortality among hospitalized patients.
 
 References
 
